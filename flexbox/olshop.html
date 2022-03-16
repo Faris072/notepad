@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<!--Font awesome-->
+	<script src="https://kit.fontawesome.com/7b5d20839a.js" crossorigin="anonymous"></script>
+	<!--sweetalert-->
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<!--Font Google-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+
+    <title>Faris Olshop</title>
+	
+	<style>
+		
+		body{
+			background-image:url(body.jpg);
+			background-size:cover;
+			background-repeat:no-repeat;
+			background-attachment:fixed;
+		}
+		
+		nav.navbar{
+			box-shadow:0px 0px 5px 0px black;
+			background-color:white;
+		}
+		
+		.navbar .container-fluid .navbar-brand{
+			font-family:pattaya;
+			font-weight:bold;
+			color:blue;
+			margin-right:19%;
+			font-size:2em;
+		}
+		
+		.navbar-nav{
+			color:white;
+		}
+		
+		.navbar .container-fluid .navbar-nav{
+			width:40%;
+			display:flex;
+			justify-content:space-evenly;
+		}
+		
+		.navbar .container-fluid .navbar-nav .nav-item .dropdown-menu:hover{
+			display:block;
+		}
+		
+		.kontainer{
+			bottom:0;
+			padding:0;
+		}
+		
+		.baner{
+			padding-top:75px;
+			display:flex;
+			width:100%;
+			margin:auto;
+		}
+		
+		.baner1,.baner2{
+			flex:1;
+			background-color:rgb(17, 80, 252);
+			padding:0px;
+			margin:0px;
+			color:white;
+			display:flex;
+		}
+		
+		.konten{
+			margin:auto;
+			width:90%;
+			font-family:padauk;
+		}
+		
+		#gambar2{
+			width:100%;
+		}
+		
+		.macam{
+			margin:auto;
+			width:75%;
+			display:flex;
+			flex-wrap:wrap;
+			align-items:space-between;
+		}
+		
+		.kategori{
+			width:25%;
+		}
+		
+		.footer{
+			background-color:black;
+			color:white;
+			padding:2%;
+			margin:auto;
+			display:flex;
+		}
+		
+	</style>
+	
+</head>
+
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light fixed-top">
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">Faris Olshop</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Contact</a>
+					</li>
+					<li class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+							Dropdown
+						</a>
+						<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<li><a class="dropdown-item" href="#">Action</a></li>
+							<li><a class="dropdown-item" href="#">Another action</a></li>
+							<li><hr class="dropdown-divider"></li>
+							<li><a class="dropdown-item" href="#">Something else here</a></li>
+						</ul>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+					</li>
+				</ul>
+					<a href="#"><button class="btn btn-success" type="submit">Login</button></a>
+			</div>
+		</div>
+	</nav>
+
+	<div class="kontainer">
+		<div class="baner">
+			<div class="baner1">
+				<div class="konten">
+					<center><h2>Selamat Datang di Faris Olshop</h2></center><br>
+					<p>Mulai belanja dengan barang pilihanmu. Mulai dari diskon 50% sampai diskon 99%. Ayo tunggu apa lagi! segera berbelanja
+						di Marketplace terbaik tahun 2021.<br><center><button class="btn btn-warning" style="border-radius:25px; width:40%;">Daftar Sekarang</button></center>
+					</p>
+				</div>
+			</div>
+			<div class="baner2">
+				<img id="gambar2" src="olshop2.jpg">
+			</div>
+		</div>
+		<div class="isi bg-light mt-5">
+			<div class="konten2">
+				<center><h5>Dapatkan Berbagai Barang Kesukaanmu <br> Dengan Mudah</h5></center>
+				<br><br>
+				<div class="macam">
+					<div class="kategori">
+						<h6>Fashion Wanita</h6>
+					</div>
+					<div class="kategori">
+						<h6>Fashion Pria</h6>
+					</div>
+					<div class="kategori">
+						<h6>Fashion Anak-Anak</h6>
+					</div>
+					<div class="kategori">
+						<h6>Alat Elektronik</h6>
+					</div>
+					<div class="kategori">
+						<h6>Alat Smartphone</h6>
+					</div>
+					<div class="kategori">
+						<h6>Alat PC/Laptop</h6>
+					</div>
+					<div class="kategori">
+						<h6>Alat Rumah Tangga</h6>
+					</div>
+					<div class="kategori">
+						<h6>Pertanian & Peliharaan</h6>
+					</div>
+					<div class="kategori">
+						<h6>Digital</h6>
+					</div>
+					<div class="kategori">
+						<h6>Dan Masih Banyak Lagi..</h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<div class="footer">
+			<div class="container">
+				<center><div class="col1">
+					<h5>Copyright 2020. Muhammad Faris Shafwan.</h5>
+					<p>Dsn. Balerejo, Ds. Kasreman, Kec. Geneng, Kab. Ngawi<br>Jawa Timur 63271.</p>
+				</div>
+				<div class="col2">
+				
+				</div>
+				</center>
+			</div>
+		</div>
+	</div>
+
+	<!--Bootstrap JS Bundle-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>

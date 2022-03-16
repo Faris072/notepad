@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- DTD mengambil dari file externalDTD.dtd -->
+<!DOCTYPE andi SYSTEM "./externalDTD.dtd">
+
+<andi>
+    <nama>Andi</nama>
+    <usia>21</usia>
+    <alamat>DS. Kasreman</alamat>
+</andi>

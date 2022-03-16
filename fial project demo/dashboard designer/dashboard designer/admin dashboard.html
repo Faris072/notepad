@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<!--bootstrap template sidebar-->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+    <title>Dashboard</title>
+	<style>
+	*{
+		box-sizing:border-box;
+		}
+
+	.navbar .navbar-brand{
+		font-family:elephant; 
+		margin-right:5%;  
+		border-right:1px solid black; 
+		padding:0px 78px 0px 76px;
+	}
+
+	.navbar .form-inline .form-control{
+	position:relative;
+	}
+
+	.collapse ul li .nav-item .nav-link .fa{
+		color:white;
+		width:20px;
+		height:100px;
+	}
+
+	.collapse ul li .nav-item .nav-link {
+		width:100px;
+		height:100px;
+	}
+
+	.container-fluid {
+		margin:auto;
+		width:100%;
+		margin-top:55px;
+		margin-left:70px;
+	}
+
+	.head {
+		width:100%;
+		height:80px;
+		padding:45px;
+		padding-top:20px;
+		border-bottom:0.5px solid grey;
+	}
+	
+	.kontainer {
+		width:100%;
+	}
+
+	@media screen and (max-width:1000px) {
+		.lihat {
+			width:100%;
+		}
+	}
+	
+	.table table,th,td {
+		border:2px solid black;
+		border-collapse:collapse;
+	}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".tolak").click(function(){
+				$(".permintaan").hide();
+			});
+		});
+	</script>
+  </head>
+  <body>
+<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-danger fixed-top">
+	  <a class="navbar-brand disabled" style="color:white;">Design Store</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+		<form class="form-inline" style="width:50%;">
+			<input class="form-control" type="search"  placeholder="Search" aria-label="Search" style="float:left; padding-right:60%;">
+			<button class="btn btn-warning my-2 my-sm-0" type="submit" style="float:left; margin-left:1%;">Search</button>
+		</form>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" style="margin-left:30px; margin-right:5px;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Filter
+					</a>  
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Orang</a>
+						<a class="dropdown-item" href="#">Produk</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Merek</a>
+						<a class="dropdown-item" href="#">Nama Toko</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Berdasarkan Alamat</a>
+						<a class="dropdown-item" href="#">harga tertinggi</a>
+						<a class="dropdown-item" href="#">harga terrendah</a>
+					</div>
+				</li>
+			</ul>
+	  </div>
+		<div class="ikon">
+			<a href="#" style="color:white;" class="fa fa-envelope ml-3 fa-2x" data-toggle="tooltip" title="pesan"></a>
+			<a href="#" style="color:white;" class="fa fa-bell ml-3 mr-5 fa-2x" data-toggle="tooltip" title="notifikasi"></a>
+		</div>
+	</nav>
+	<br><br>
+<!--/Navbar-->	
+<!--container kiri-->
+	<div class="wrapper d-flex align-items-stretch" style="height:1200px;">
+			<nav id="sidebar" class="bg-danger">
+				
+	  		<div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg);">
+	  			<div class="user-logo">
+	  				<div class="img" style="background-image: url(images/pasfoto.jpg);"></div>
+	  				<h3>Muhammad Faris Shafwan</h3>
+	  			</div>
+	  		</div>
+			<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary"></button>
+			</div>
+        <ul class="list-unstyled components mb-5" >
+		  <li class="active">
+            <a href="admin dashboard.html">Admin Dashboard</a>
+          </li>
+          <li>
+          <li>
+            <a href="#">Manage Designer</a>
+          </li>
+          <li>
+            <a href="dashboard desginer.html">Manage Customer</a>
+          </li>
+          <li>
+            <a href="permintaan designer.html">Konten Dihapus</a>
+          </li>
+          <li>
+            <a href="backend pengaduan.html">Laporan Pengaduan</a>
+          </li>
+          <li>
+            <a href="#">Blokir Akun</a>
+          </li>
+          <li>
+            <a href="#">Pengelola Website</a>
+          </li>
+		  <li>
+            <a href="#">Problem Transaksi</a>
+          </li>
+		  <li>
+            <a href="#">Pengaturan</a>
+          </li>
+		  <li>
+            <a href="../../homepage.html">Keluar  <span class="fa fa-sign-out mr-3"></span> </a>
+          </li>
+        </ul>
+    	</nav>
+<!-- Page Content  -->
+	<div class="kontainer">
+		<div class="head">
+			<h2><i class="fa fa-dashboard mr-3"></i><strong>Dashboard:</strong></h2>
+		</div>
+		<div class="row text-white ml-5 mt-5">
+			<div class="card text-white bg-primary mb-3 text-center mr-4" style="max-width: 18rem;">
+				<div class="card-header">Jumlah Akun</div>
+				<div class="card-body">
+					<h5 class="card-title display-4" style="font-weight:bold; color:white;">50jt</h5>
+					<p class="card-text text-center">Pengguna Akun Aktif</p>
+					<a href="#" class="btn btn-primary pl-5 pr-5">Lihat Detail</a>
+				</div>
+			</div>
+			<div class="card text-white bg-success mb-3 text-center mr-4" style="max-width: 18rem;">
+				<div class="card-header">Pengguna Baru</div>
+				<div class="card-body">
+					<h5 class="card-title display-4" style="font-weight:bold; color:white;">50rb</h5>
+					<p class="card-text text-center">Pengguna Baru Bulan ini</p>
+					<a href="#" class="btn btn-primary pl-5 pr-5">Lihat Detail</a>
+				</div>
+			</div>
+			<div class="card text-white bg-warning mb-3 text-center mr-4" style="max-width: 18rem;">
+				<div class="card-header">Total Transaksi</div>
+				<div class="card-body">
+					<h5 class="card-title display-4" style="font-weight:bold; color:white;">750jt</h5>
+					<p class="card-text text-center">Transaksi</p>
+					<a href="#" class="btn btn-primary pl-5 pr-5">Lihat Detail</a>
+				</div>
+			</div>
+			<div class="card text-white bg-danger mb-3 text-center mr-4" style="max-width: 18rem;">
+				<div class="card-header">Pengguna Diblokir</div>
+				<div class="card-body">
+					<h5 class="card-title display-4" style="font-weight:bold; color:white;">172</h5>
+					<p class="card-text text-center">Akun Diblokir</p>
+					<a href="#" class="btn btn-primary pl-5 pr-5">Lihat Detail</a>
+				</div>
+			</div>
+		</div>
+		<br><br>
+		<hr>
+		<div class="col-md-10 m-5 pt-2">
+		<h3 class="mb-4"><i class="fa fa-user-circle-o mr-2" aria-hidden="true"></i><strong>Daftar Anggota Admin</strong></h3>
+			<a class="btn btn-primary text-white mb-2"><i class="fa fa-plus-square text-white mr-2"></i>  Tambah Admin</a>
+			<form>
+				<input type="text" placeholder="Search">
+				<button class="btn btn-success mb-1" style="padding:2px;" type="submit">Search</button>
+			</form>
+			<table class="table table-striped table-bordered">
+				<thead>
+					<tr class="bg-primary text-white" style="text-align:center;">
+						<th scope="col">No.</th>
+						<th scope="col">Nama</th>
+						<th scope="col">ID</th>
+						<th scope="col">Bidang</th>
+						<th scope="col">Kantor</th>
+						<th colspan="3" scope="col">Aksi</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Muhammad Faris Shafwan</td>
+						<td>357972</td>
+						<td>CEO</td>
+						<td>Jakarta</td>
+						<td>
+							<a class="btn btn-primary mr-2 text-white">Detail</a>
+						</td>
+						<td>
+							<a class="btn btn-secondary mr-2 rounded" tooltip="data-toggle" title="Edit"><i class="fa fa-edit text-white disabled"></i></a>
+						</td>
+						<td>
+							<a class="btn btn-secondary rounded" tooltip="data-toggle" title="Hapus Admin"><i class="fa fa-trash text-white disabled"></i></a>
+						</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Nabila Rindiani Azahra</td>
+						<td>567424</td>
+						<td>Kepala Cabang Jakarta</td>
+						<td>Jakarta</td>
+						<td>
+							<a class="btn btn-primary mr-2 text-white">Detail</a>
+						</td>
+						<td>
+							<a class="btn btn-success mr-2 rounded" tooltip="data-toggle" title="Edit"><i class="fa fa-edit bg-success text-white"></i></a>
+						</td>
+						<td>
+							<a class="btn btn-danger rounded" tooltip="data-toggle" title="Hapus Admin"><i class="fa fa-trash text-white disabled"></i></a>
+						</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Alif</td>
+						<td>356739</td>
+						<td>System Analyst</td>
+						<td>Jakarta</td>
+						<td>
+							<a class="btn btn-primary mr-2 text-white">Detail</a>
+						</td>
+						<td>
+							<a class="btn btn-success mr-2 rounded" tooltip="data-toggle" title="Edit"><i class="fa fa-edit bg-success text-white"></i></a>
+						</td>
+						<td>
+							<a class="btn btn-danger rounded" tooltip="data-toggle" title="Hapus Admin"><i class="fa fa-trash text-white"></i></a>
+						</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Ridwan</td>
+						<td>939254</td>
+						<td>Software Enginer</td>
+						<td>Jakarta</td>
+						<td>
+							<a class="btn btn-primary mr-2 text-white">Detail</a>
+						</td>
+						<td>
+							<a class="btn btn-success mr-2 rounded" tooltip="data-toggle" title="Edit"><i class="fa fa-edit bg-success text-white"></i></a>
+						</td>
+						<td>
+							<a class="btn btn-danger rounded" tooltip="data-toggle" title="Hapus Admin"><i class="fa fa-trash text-white"></i></a>
+						</td>
+					</tr>
+					<tr>
+						<td>5</td>
+						<td>Imam Syahroni</td>
+						<td>435573</td>
+						<td>Kepala Cabang Surabaya</td>
+						<td>Surabaya</td>
+						<td>
+							<a class="btn btn-primary mr-2 text-white">Detail</a>
+						</td>
+						<td>
+							<a class="btn btn-success mr-2 rounded" tooltip="data-toggle" title="Edit"><i class="fa fa-edit bg-success text-white"></i></a>
+						</td>
+						<td>
+							<a class="btn btn-danger rounded" tooltip="data-toggle" title="Hapus Admin"><i class="fa fa-trash text-white"></i></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<nav aria-label="Page navigation example">
+			  <ul class="pagination">
+				<li class="page-item">
+				  <a class="page-link" href="#" aria-label="Previous">
+					<span aria-hidden="true">&laquo;</span>
+				  </a>
+				</li>
+				<li class="page-item active"><a class="page-link" href="#">1</a></li>
+				<li class="page-item"><a class="page-link" href="#">2</a></li>
+				<li class="page-item"><a class="page-link" href="#">3</a></li>
+				<li class="page-item disabled"><a class="page-link" href="#">...</a></li>
+				<li class="page-item"><a class="page-link" href="#">72</a></li>
+				<li class="page-item">
+				  <a class="page-link" href="#" aria-label="Next">
+					<span aria-hidden="true">&raquo;</span>
+				  </a>
+				</li>
+			  </ul>
+			</nav>
+		</div>
+</div>
+		
+<!--/container kiri-->
+
+<!--bootstrap template sidebar JS-->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>    
+	
+	<!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    
+  </body>
+</html>

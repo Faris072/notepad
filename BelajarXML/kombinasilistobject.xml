@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<investasi>
+    <saham>
+        <namaSaham>BBRI</namaSaham>
+        <hargaOpen>33000</hargaOpen>
+        <hargaHigh>40000</hargaHigh>
+        <hargaLow>30000</hargaLow>
+        <hargaClose>35000</hargaClose>
+    </saham>
+    <saham>
+        <namaSaham>BBCA</namaSaham>
+        <hargaOpen>50000</hargaOpen>
+        <hargaHigh>60000</hargaHigh>
+        <hargaLow>45000</hargaLow>
+        <hargaClose>55000</hargaClose>
+    </saham>
+    <saham>
+        <namaSaham>DJIA</namaSaham>
+        <hargaOpen>100000</hargaOpen>
+        <hargaHigh>120000</hargaHigh>
+        <hargaLow>90000</hargaLow>
+        <hargaClose>150000</hargaClose>
+    </saham>
+</investasi>

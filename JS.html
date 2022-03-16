@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+	var suit,hasil,bermain=true;
+	while(bermain==true){
+		suit = prompt('Masukkan suit (gajah,orang,semut): ');
+		if (suit==false){
+		bermain=false;
+		break;
+		}
+		var komputer = Math.random();
+		
+		if (komputer < 0.34){
+			suitKomp='semut';
+		}
+		else if (komputer >=0.34 && komputer <0.67){
+			suitKomp='orang';
+		}
+		else{
+		suitKomp='gajah';
+		}
+		
+		if(suit==suitKomp){
+		hasil='seri';
+		}
+		else if (suit=='gajah'){
+			if (suitKomp=='orang')
+			hasil='MENANG';
+			else
+			hasil='KALAH';
+		}
+		else if (suit=='orang'){
+			if (suitKomp=='semut')
+			hasil='MENANG';
+			else
+			hasil='KALAH';
+		}
+		else if (suit=='semut'){
+			if (suitKomp=='gajah')
+			hasil='MENANG';
+			else
+			hasil='KALAH';
+		}
+		
+		if (hasil=='MENANG'){
+			alert('Anda memilih: '+suit+'\nkomputer memilih: '+suitKomp+'\nSelamat Anda Menang');
+		}
+		else if (hasil=='seri'){
+			alert('Anda memilih: '+suit+'\nkomputer memilih: '+suitKomp+'\nSERI');
+		}
+		else {
+			alert('Anda memilih: '+suit+'\nkomputer memilih: '+suitKomp+'\nMaaf anda KALAH');
+		}
+		var bermain= confirm('apakah anda ingin bermain lagi?');
+	}
+</script>
+</head>
+<body>
+</body>
+</html>

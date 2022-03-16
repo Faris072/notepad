@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aturanSimbol>
+    <kurangdari>&lt;</kurangdari>
+    <dan>&amp;</dan>
+</aturanSimbol>
+<!-- ini adalah aturan simbol yang harus kita gunakan untuk membuat simbol/entity di xml -->
+<!-- &amp; -> '&' -->
+<!-- &lt; -> '<'  -->

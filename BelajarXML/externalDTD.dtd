@@ -1,0 +1,4 @@
+<!ELEMENT andi (nama,usia,alamat)>
+<!ELEMENT nama (#PCDATA)> <!-- #PCDATA adalah Parseable text data -> untuk memparsing data supaya tidak error -->
+<!ELEMENT usia (#PCDATA)>
+<!ELEMENT alamat (#PCDATA)>

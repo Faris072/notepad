@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- saya ingin menggunakan aturan dengan membuat deklarasi yang mengharuskan tag rootnya adalah andi -->
+<!-- kemudian mempunyai sub tag yaitu nama, usia, alamat -->
+<!-- DTD: Document Type Declaration -->
+<!-- DTD bisa ditulis di dalam file xml (internal DTD) atau diluar file xml (external DTD) -->
+<!DOCTYPE andi [
+    <!ELEMENT andi (nama,usia,alamat)>
+    <!ELEMENT nama (#PCDATA)> <!-- #PCDATA adalah Parseable text data -> untuk memparsing data supaya tidak error -->
+    <!ELEMENT usia (#PCDATA)>
+    <!ELEMENT alamat (#PCDATA)>
+]>
+
+<!-- xml harus memenuhi format internal DTD diatas -->
+<andi>
+    <nama>Andi</nama>
+    <usia>19</usia>
+    <alamat>Ds. Kendung</alamat>
+</andi>

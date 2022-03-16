@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mahasiswa>
+    <mahasiswa kelas="1" kategori="TI">
+        <nama>Faris</nama>
+        <NRP>3120510104</NRP>
+    </mahasiswa> 
+    <mahasiswa kelas="1" kategori="TI">
+        <nama>Faris.s</nama>
+        <NRP>3120510105</NRP>
+    </mahasiswa> 
+    <mahasiswa kelas="2" kategori="ELK">
+        <nama>Apan</nama>
+        <NRP>3120510130</NRP>
+    </mahasiswa> 
+</mahasiswa>

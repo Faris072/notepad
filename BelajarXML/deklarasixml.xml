@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?><!-- deklarasi xml default -->
+<!-- xml deklarasi menggunakan standalone -->
+<!-- <?xml version="1.0" encoding="UTF-8" standalone="yes"?> -->
+<!-- version->untuk memberitahu versi berapa -->
+<!-- encoding -> untuk memberitahu tipe encoding  -->
+<!-- standalone -> untuk mengetahui bahwa file ini bergantung pada file lain atau tidak -->
+
+<!-- NB: harus ada satu tag utama yang menjadi induk dari sebuah file -->
+<!-- tag bebas -->
+
+<mahasiswa>
+    <Nama>M.Faris.S</Nama>
+    <NRP>3120510104</NRP>
+    <Kelas>D3PJJTI-A</Kelas>
+    <Angkatan>2020</Angkatan>
+</mahasiswa>

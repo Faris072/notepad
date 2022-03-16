@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+	<!--bootstrap template sidebar-->
+	<link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/style.css">
+    <title>Dashboard</title>
+	<style>
+	*{
+		box-sizing:border-box;
+		}
+		
+	.navbar .navbar-brand{
+		font-family:elephant; 
+		margin-right:5%;  
+		border-right:1px solid black; 
+		padding:0px 78px 0px 76px;
+	}
+	
+	.navbar .form-inline .form-control{
+		padding-right:350px;
+	}
+	
+	.collapse ul li .nav-item .nav-link .fa{
+		color:white;
+		width:20px;
+		height:100px;
+	}
+	
+	.collapse ul li .nav-item .nav-link {
+		width:100px;
+		height:100px;
+	}
+	
+	.container-fluid {
+		margin:auto;
+		width:100%;
+		margin-top:55px;
+		margin-left:70px;
+	}
+	
+	.head {
+		background-color:lightblue; 
+		width:100%;
+		height:100px;
+		padding:25px;
+		border:3px solid black;
+	}
+	
+	.permintaan {
+		width:100%;
+		height:80px;
+		padding:0px 10px 0px 25px;
+		border:3px solid black;
+		margin-bottom:5px;
+		float:left;
+	}
+	
+	.permintaan .desc {
+		width:55%;
+		float:left;
+	}
+	
+	.permintaan .deadline {
+		border-left:2px solid grey;
+		float:left;
+		padding:0px 0px 0px 10px;
+		margin:5px 5% 0% 0%;
+		height:65px;
+	}
+	
+	.permintaan .tombol {
+		margin:auto;
+		float:left;
+	}
+	
+	.permintaan .tombol a {
+		margin:5px;
+		margin-top:20px;
+	}
+	.permintaan .tombol button {
+		margin:5px;
+	}
+	
+	.kontainer {
+		width:100%;
+	}
+	
+	@media screen and (max-width:1000px) {
+		.permintaan {
+			width:100%;
+		}
+	}
+	
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".tolak").click(function(){
+				$(".permintaan").hide();
+			});
+		});
+	</script>
+  </head>
+  <body>
+<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+	  <a class="navbar-brand disabled" style="color:white;">Design Store</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+		<form class="form-inline my-2 my-lg-0">
+			<input class="form-control mr-sm-2" type="search"  placeholder="Search" aria-label="Search">
+			<button class="btn btn-warning my-2 my-sm-0" type="submit">Search</button>
+		</form>
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav mr-auto">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" style="margin-left:30px; margin-right:5px;" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Filter
+					</a>  
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<a class="dropdown-item" href="#">Orang</a>
+						<a class="dropdown-item" href="#">Produk</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Merek</a>
+						<a class="dropdown-item" href="#">Nama Toko</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">Berdasarkan Alamat</a>
+						<a class="dropdown-item" href="#">harga tertinggi</a>
+						<a class="dropdown-item" href="#">harga terrendah</a>
+					</div>
+				</li>
+				<li class="nav-item active" style="margin-left:150px;">
+						<a href="dashboard desginer.html" class="nav-link"><span class="fa fa-paint-brush"></span></a>
+				</li>
+				<li class="nav-item" style="margin-left:20px;">
+						<a href="#" class="nav-link"><span class="fa fa-shopping-cart"></span></a>
+				</li>
+			</ul>
+	  </div>
+	</nav>
+	<br><br>
+<!--/Navbar-->	
+<!--container kiri-->
+	<div class="wrapper d-flex align-items-stretch">
+			<nav id="sidebar" style="background-color:blue;">
+				
+	  		<div class="img bg-wrap text-center py-4" style="background-image: url(images/bg_1.jpg);">
+	  			<div class="user-logo">
+	  				<div class="img" style="background-image: url(images/pasfoto.jpg);"></div>
+	  				<h3>Muhammad Faris Shafwan</h3>
+	  			</div>
+	  		</div>
+			<div class="custom-menu">
+					<button type="button" id="sidebarCollapse" class="btn btn-primary"></button>
+			</div>
+        <ul class="list-unstyled components mb-5" >
+          <li>
+            <a href="#"><span class="fa fa-user mr-3"></span> Profil</a>
+          </li>
+          <li>
+            <a href="dashboard desginer.html"><span class="fa fa-dashboard mr-3"></span> Dashboard</a>
+          </li>
+          <li>
+            <a href="permintaan designer.html"><span class="fa fa-american-sign-language-interpreting mr-3 notif"><small class="d-flex align-items-center justify-content-center">5</small></span> Permintaan</a>
+          </li>
+          <li class="active">
+            <a href="dikerjakan designer.html"><span class="fa fa-pencil mr-3"></span> Dikerjakan</a>
+          </li>
+          <li>
+            <a href="riwayat transaksi designer.html"><span class="fa fa-clock-o mr-3"></span> Riwayat transaksi</a>
+          </li>
+          <li>
+            <a href="#"><span class="fa fa-usd mr-3"></span> Penghasilan</a>
+          </li>
+		  <li>
+            <a href="#"><span class="fa fa-shopping-cart mr-3"></span> Toko Saya</a>
+          </li>
+		  <li>
+            <a href="#"><span class="fa fa-gear mr-3"></span> Pengaturan</a>
+          </li>
+		  <li>
+            <a href="C:\Users\FARIS\Documents\notepad\fial project demo/homepage.html"><span class="fa fa-sign-out mr-3"></span> Keluar</a>
+          </li>
+        </ul>
+    	</nav>
+<!-- Page Content  -->
+	<div class="kontainer">
+		<div class="head">
+			<h1><strong>Dikerjakan:</strong></h1>
+		</div>
+				<div class="permintaan">
+			<div class="desc">
+				<h5 style="padding:0px; nargin:0px;"><strong>PT. Agrodana Futures</strong></h5>
+				<p style="padding:0px; margin:0px;">Membuat logo perusahaan PT. Agrodana Futures</p>
+			</div>
+			<div class="deadline">
+				<p><strong>Deadline:</strong></p>
+				<p>08/10/2021 | 17.00</p>
+			</div>
+			<div class="tombol">
+				<a href="kerjakan designer 2.html" class="btn btn-success" style="float:left;" onclick="confirm('Apakah anda setuju untuk mengerjakan project ini?')">Upload</a>
+				<button class="tolak btn btn-danger" style="float:left; margin-top:20px;" onclick="confirm('Apakah anda setuju untuk menolak project ini?')">Tolak</button>
+			</div>
+		</div>
+		</div>
+	</div>
+	
+<!--/container kiri-->
+
+<!--bootstrap template sidebar JS-->
+	<script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>    
+	
+	<!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
