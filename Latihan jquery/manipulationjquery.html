@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <title>Title</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/7b5d20839a.js" crossorigin="anonymous"></script>
+    <!--sweetalert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--Font Google-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+        
+<style>
+
+    </style>
+</head>
+<body>
+    
+    <h1 class="stylejudul">Style</h1>
+    <button id="ubahstylejudul">Ubah Style</button>
+    <br><br>
+    <h1 class="classjudul">Class</h1>
+    <button id="tambahclass">Class</button>
+    <button id="hapusclass">Hapus Class</button>
+    <button id="toggleclass">Toggle class</button>
+
+    <br><br>
+    <p id="p1">p1</p>
+    <button id="ubahisitext">Ubah isi (text)</button>
+    <button id="ubahisihtml">Ubah isi (html)</button>
+    <br><br>
+    <ul id="list">
+        <li>list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+        <li>list 5</li>
+    </ul>
+    <button id="tambahitemakhir">Tambah Item Akhir</button>
+    <button id="tambahitemawal">Tambah Item Awal</button>
+    <button id="after">after</button>
+    <button id="before">before</button>
+    <br>
+    <button id="empty">Kosongkan</button>
+    <button id="detach">Hapus</button>
+    <br><br><br><br>
+    <a id="linkattr">LInk attribute</a><br>
+    <a>test wrapAll</a>
+    <br>
+    <button id="tambahattr">Tambah attribute</button>
+    <button id="hapusattr">Hapus Attribute</button>
+    <button id="bungkusattr">Bungkus Attribute</button>
+    <button id="bungkusallattr">Bungkus semua attr yang sejajar</button>
+    <br>
+    <br>
+    <input type="text" id="keyup">
+    <p id="isikeyup"></p>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        // //mengubah style
+        // $('#ubahstylejudul').on('click', function(){
+        //     $('.stylejudul').css('background-color','blue');
+        // });
+        //mengubah banyak style
+        $('#ubahstylejudul').on('click',function(){
+            $('.stylejudul').css({
+                'background-color':'black',
+                'color':'white'
+            });
+        });
+        
+        //menambahkan class
+        $('#tambahclass').on('click', function(){
+            $('.classjudul').addClass('bg-primary');
+        });
+        //menghapus class
+        $('#hapusclass').on('click',function(){
+            $('.classjudul').removeClass('bg-primary');
+        });
+        //toggle class (mengubah dan menghapus class dalam 1 class/seperti saklar)
+        $('#toggleclass').on('click',function(){
+            $('.classjudul').toggleClass('bg-primary');
+        });
+
+        //mengubah isi element(text)
+        $('#ubahisitext').on('click',function(){
+            $('#p1').text('<b>Mengubah isi dengan text, tag akan muncul dan tidak bekerja</b>');
+        });
+        //mengubah isi element(html)
+        $('#ubahisihtml').on('click',function(){
+            $('#p1').html('<b>Mengubah isi dengan html, akan bekerja dan tidak akan muncul di output</b>');
+        });
+
+        //menambahkan element/item baru
+        //apped (menambahkan item di akhir anak kalimat. jadi yang di seleksi adalah parentnya)
+        $('#tambahitemakhir').on('click',function(){
+            $('#list').append('<li>list baru</li>');
+        });
+        //prepend (menambahkan item di awal anak kalimat. jadi yang di seleksi adalah parentnya)
+        $('#tambahitemawal').on('click',function(){
+            $('#list').prepend('<li>item baru</li>');
+        });
+        //after (menambahkan item setelah element yang diseleksi)
+        $('#after').on('click',function(){
+            $('#list li:eq(1)').after('<li>list after</li>');//eq adalah index. index dimulai dari 0. ini menambahkan element setelah list index ke 1
+        });
+        //before (menambahkan item sebelum element yang diseleksi)
+        $('#before').on('click',function(){
+            $('#list li:eq(4)').before('<li>list before</li>');//ini menambahkan item element sebelum list index ke 4
+        });
+
+        //menghapus element/items
+        //empty(mengosongkan item anak)
+        $('#empty').on('click',function(){
+            $('#list').empty();
+        });
+        //detach(menghapus item yang diseleksi)
+        $('#detach').on('click',function(){
+            $('#list li:eq(0)').detach();//ini tidak menghapus data historynya
+            //$('#list li:eq(0)').remove();//ini menghapus data historynya
+        });
+
+        //attribute
+        //menambahkan attribute
+        $('#tambahattr').on('click',function(){
+            //$('#linkattr').attr('href','https://uasfaris.epizy.com');
+            $('#linkattr').attr({
+                'href':'eventjquery.html',
+                'name':'nama',
+                'disabled':true,
+                'title':'ini link biasa'
+                //'hidden':true
+            });
+        });
+        //menghapus attribute (tidak bisa menghapus attr metode banyak sekaligus)
+        $('#hapusattr').on('click',function(){
+            //$('#linkattr').removeAttr('href');
+            $('#linkattr').removeAttr('href');
+            $('#linkattr').removeAttr('name');
+            $('#linkattr').removeAttr('disabled');
+        });
+
+        //membungkus element
+        //wrap (membungkus element yang dipilih)
+        $('#bungkusattr').on('click',function(){
+            $('#linkattr').wrap('<center>');
+        });
+        //wrapAll (membungkus element yang sejajar kedudukannya)
+        $('#bungkusallattr').on('click',function(){
+            $('a').wrapAll('<b>');
+        });
+
+        //keyup (menangkap apapun yang diketikkan)
+        $('#keyup').keyup(function(){
+            $('#isikeyup').text($(this).val());
+        });
+    </script>
+</body>
+</html> 
+
+
+
+

@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <title>Title</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/7b5d20839a.js" crossorigin="anonymous"></script>
+    <!--sweetalert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--Font Google-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+        
+    <style>
+
+    </style>
+</head>
+<body>
+    
+    <div id="hide" style="width:100px; height:100px; background-color:yellow;">Hide</div>
+    <button id="btnhide">Sembunyikan</button>
+    <button id="btnshow">Tampilkan</button>
+    <button id="toggle">Toggle</button>
+    <br><br><br>
+    <h3>Fade</h3>
+    <br>
+    <div class="box1" style="width:50px; height:50px; background-color:red;">Box1</div><br>
+    <div class="box2" style="width:50px; height:50px; background-color:green;">Box2</div><br>
+    <div class="box3" style="width:50px; height:50px; background-color:blue;">Box3</div><br>
+    <button id="fadeout">Fadeout</button>
+    <button id="fadein">Fadein</button>
+    <button id="fadetoggle">Fadetoggle</button>
+    <button id="fadeto">FadeTo</button>
+    <br><br><br>
+    <h3>Slide</h3>
+    <div class="boxslide" style="width:100px; height:100px; background-color:red;">boxslide</div>
+    <button id="slideup">Slideup</button>
+    <button id="slidedown">Slidedown</button>
+    <button id="slidetoggle">Slidetoggle</button>
+    <br><br><br>
+    <h3>Animate</h3>
+    <button id="kiri">&laquo;</button><!-- itu adalah entitas -->
+    <button id="kanan">&raquo;</button>
+    <button id="atas">&and;</button>
+    <button id="bawah">&or;</button>
+    <button id="animatebanyak">animate banyak</button>
+    <div class="animate" style="width:100px;height:100px;background-color:lime; position:absolute;">Animate</div>
+    <br><br><br><br><br><br><br><br>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <div class="queue" style="background-color:blue; width:100px;height:100px; position:absolute;">Queue</div>
+    <br><br><br><br><br><br><br><br>
+    <button id="mulai">Start</button>
+    <div class="delay" style="width:100px; height:100px; background-color:orangered; position:absolute;">dengan delay</div>
+    <div class="nodelay" style="width:100px; margin-left:150px; height:100px; background-color:yellowgreen; position:absolute;">tanpa delay</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        //menyembunyikan element
+        $('#btnhide').on('click',function(){
+            //$('#hide').hide();
+            $('#hide').hide(1000);//menyembunyikan element dengan transisi 1000ms/1s
+            // $('#hide').hide('slow');//menyembunyikan element dengan pelan
+            // $('#hide').hide('fast');//menyembunyikan element dengan cepat
+        });
+
+        //memunculkan element
+        $('#btnshow').on('click',function(){
+            // $('#hide').show();
+            $('#hide').show(1000);
+            // $('#hide').show('slow');
+            // $('#hide').show('fast');
+        });
+
+        //toggle (kombinasi hide dan show)
+        $('#toggle').on('click',function(){
+            // $('#hide').toggle();
+            $('#hide').toggle(1000);
+            // $('#hide').toggle('slow');
+            // $('#hide').toggle('fast');
+        });
+
+        //fade (hide & show tapi ada animasi buramnya/kabur)
+        //fadeOut (menghilangkan element dengan cara transparant sampai habis dan elementnya akan hilang/buram sampai hilang)
+        $('#fadeout').on('click',function(){
+            // $('.box1, .box2, .box3').fadeOut();
+            $('.box1, .box2, .box3').fadeOut(1000);
+            // $('.box1, .box2, .box3').fadeOut('slow');
+            // $('.box1, .box2, .box3').fadeOut('fast');
+        });
+        //fadeIn (memunculkan element dengan cara transparant)
+        $('#fadein').on('click',function(){
+            // $('.box1, .box2, .box3').fadeIn();
+            $('.box1, .box2, .box3').fadeIn(1000);
+            // $('.box1, .box2, .box3').fadeIn('slow');
+            // $('.box1, .box2, .box3').fadeIn('fast');
+        });
+        //fadeToggle(kombinasi fade in dan fade out)
+        $('#fadetoggle').on('click',function(){
+            // $('.box1, .box2, .box3').fadeToggle();
+            $('.box1, .box2, .box3').fadeToggle(1000);
+            // $('.box1, .box2, .box3').fadeToggle('slow');
+            // $('.box1, .box2, .box3').fadeToggle('fast');
+        });
+        //fadeTo(kombinasi fadeIn dan fadeOut dengan cara transparansi tapi tidak sampai habis/hilang elementnya)
+        $('#fadeto').on('click',function(){
+            $('.box1, .box2, .box3').fadeTo(1000,0.3);//parameter 1 untuk speed parameter 2 untuk opacity/transparansi
+            // $('.box1, .box2, .box3').fadeTo('slow',0.5);
+            // $('.box1, .box2, .box3').fadeTo('fast',0.2);
+            // $('.box1, .box2, .box3').fadeTo();//tidak bisa digunakan
+            // $('.box1, .box2, .box3').fadeTo('1000');//tidak bisa digunakan
+            // $('.box1, .box2, .box3').fadeTo(1000,0);
+        });
+
+
+        //Slide (hide dan show element dengan animaasi menciut atau melebar)
+        //slideUp(menghilangkan element dengan efek slide menciut keatas)
+        $('#slideup').on('click',function(){
+            // $('.boxslide').slideUp();
+            $('.boxslide').slideUp(1000);
+            // $('.boxslide').slideUp('slow');
+            // $('.boxslide').slideUp('fast');
+        });
+        //slideDown (memunculkan element dengan efek slide melebar kebawah)
+        $('#slidedown').on('click',function(){
+            // $('.boxslide').slideDown();
+            // $('.boxslide').slideDown(1000);
+            // $('.boxslide').slideDown('slow');
+            // $('.boxslide').slideDown('fast');
+        });
+        //slideToggle(kombinasi slideUp dan slideDown)
+        $('#slidetoggle').on('click',function(){
+            // $('.boxslide').slideToggle();
+            $('.boxslide').slideToggle(1000);
+            // $('.boxslide').slideToggle('slow');
+            // $('.boxslide').slideToggle('fast');
+        });
+
+        //animate (bisa menggunakan slow, fast, atau detik)
+        $('#kiri').on('click',function(){
+            // $('.animate').animate({'left': '-=50px'});
+            $('.animate').animate({'left':'-=50px'},1000);
+            // $('.animate').animate({'left':'-=50px'},'fast');
+            // $('.animate').animate({'left':'-=50px'},'slow');
+        });
+        $('#kanan').on('click',function(){
+            $('.animate').animate({'right':'-=50px'},'slow');
+        });
+        $('#atas').on('click',function(){
+            $('.animate').animate({'top':'-=50px'},1000);
+        });
+        $('#bawah').on('click',function(){
+            $('.animate').animate({'bottom':'-=50px'});
+        });
+        //animate banyak
+        $('#animatebanyak').on('click',function(){
+            $('.animate').animate({
+                'right':'-=100px',
+                'width':'500px',
+                'top':'-=100px',
+                'opacity':'0'
+            });
+        });
+
+        //queue & clearQueue (queue untuk menjalankan fungsi banyak sekaligus dan berurutan sedangkan clearQueue menghentikan queuenya sehingga semua fungsi yang di queue akan berhenti)
+        $('#start').on('click',function(){
+            $('.queue').animate({'right':'-=1000px'},5000);
+            $('.queue').queue(function(){});
+        });
+
+        $('#stop').on('click',function(){
+            $('.queue').clearQueue();//diberi clearQueue supaya setelah di stop, tombol start bisa digunakan lagi. jika tidak ada clearQueue maka setelah di stop tombol start tidak berfungsi dan stop menjadi seperti toggle karena saat di stop data yang di queue masih ada dan belum dihapus
+            $('.queue').stop();
+        });
+
+        //delay
+        $('#mulai').on('click',function(){
+            $('.delay').slideUp(1000).delay(2000).fadeIn(1000);
+            $('.nodelay').slideUp(1000).fadeIn(1000);
+        });
+        
+    </script>
+</body>
+</html> 
+
+
+
+

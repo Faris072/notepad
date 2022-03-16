@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="id">
+<head>
+    <title>kalkulator</title>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css"href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font awesome-->
+    <script src="https://kit.fontawesome.com/7b5d20839a.js" crossorigin="anonymous"></script>
+    <!--sweetalert-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!--Font Google-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+        
+    <style>
+        .tombol .row{
+            flex-wrap: nowrap;
+        }
+
+        .tombol .row .col-md-3 button{
+            width:100%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+    <div class="row" style="height:100vh; flex-wrap:wrap;">    
+        <div class="col-md-6">
+        <div class="container p-4 m-auto bg-light">
+            <h1>Kalkulator IPK</h1><br>
+            <button id="tambah" class="btn btn-success" style="margin-right:10px;">Tambah Matkul</button>
+            <button id="kurang" class="btn btn-danger">Kurangi Matkul</button>
+            <table cellpadding="10" cellspacing="0" border="0" id="table">    
+                <tr>
+                    <th>No.</th>
+                    <th>SKS</th>
+                    <th>Nilai</th>
+                </tr>
+                <tr class="data1">
+                    <td>1</td>
+                    <td>
+                        <select class="sks">
+                            <option disabled selected>-Pilih-</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select class="nilai">
+                            <option disabled selected>-Pilih-</option>
+                            <option value="4">A</option>
+                            <option value="3.5">AB</option>
+                            <option value="3">B</option>
+                            <option value="2.5">BC</option>
+                            <option value="2">C</option>
+                            <option value="1.5">CD</option>
+                            <option value="1">D</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+            <br><p class="text-muted">SKS dan Nilai tidak boleh ada yang kosong!</p><br>
+            <p>
+                Jumlah nilai anda adalah: <span id="jnilai"></span><br>
+                Jumlah SKS anda adalah: <span id="jsks"></span><br>
+                <b>IPK anda adalah: <span id="hasil"></span></b>
+            </p>
+            <br>
+            <p>copyright Muhammad Faris Shafwan</p>
+        </div>
+    </div>
+    <div class="col-md-6 d-flex">
+        <div class="container m-auto bg-dark p-3 py-5">
+            <div class="calc" style="width:80%; margin:auto;">
+                <h1 style="color:white;">Kalkulator</h1>
+                <input type="text" class="inputan form-control" value="" disabled>
+                <h3 class="text-muted">= <span id="bayangan"></span></h3>
+                <br>
+                <div class="tombol">
+                    <div class="row">
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-secondary" value="(">(</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-secondary" value=")">)</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-secondary" value="CLEAR">CLEAR</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-secondary" value="DEL">DEL</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-light" value="9">9</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-light" value="8">8</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-light" value="7">7</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-secondary" value="/">/</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-light" value="6">6</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-light" value="5">5</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-light" value="4">4</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-secondary" value="*">x</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-light" value="3">3</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-light" value="2">2</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-light" value="1">1</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-secondary" value="-">-</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-light" value="0">0</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-light" value=".">.</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-primary" value="=">=</button>
+                        </div>
+                        <div class="col-md-3 p-1">
+                            <button class="btn btn-secondary" value="+">+</button>
+                        </div>
+                    </div>
+                </div>
+                <p style="color:white;">copyright Muhammad Faris Shafwan</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="kalkulator.js"></script>
+</body>
+</html> 
